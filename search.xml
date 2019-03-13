@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>基于 GitHub Page &amp;&amp; Hexo &amp;&amp; Aria 的建站过程</title>
+      <link href="/2019/03/13/%E5%9F%BA%E4%BA%8EGitHub-Page-&amp;-Hexo-&amp;-Aria%E7%9A%84%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/"/>
+      <url>/2019/03/13/%E5%9F%BA%E4%BA%8EGitHub-Page-&amp;-Hexo-&amp;-Aria%E7%9A%84%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p>…说到底，还是喜欢折腾啊。<br><a id="more"></a></p><h1 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h1><ul><li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Page</a>（我们将网站托管在这里）</li><li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git for Window</a>（我们使用它输入各种命令）</li><li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a>（我们使用它来下载Hexo框架）</li><li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>（博客框架）</li><li><a href="https://github.com/AlynxZhou/hexo-theme-aria" target="_blank" rel="noopener">Aria</a>（博客主题）</li></ul><h1 id="写作阶段"><a href="#写作阶段" class="headerlink" title="写作阶段"></a>写作阶段</h1><p>文章头部，定义“标题”、“日期”、“分类”、“标签”和“显示大纲截至位置”等。<br><figure class="hljs highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">基于</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Page</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">Hexo</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">Aria</span> <span class="hljs-string">的建站过程</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019</span><span class="hljs-bullet">-03</span><span class="hljs-bullet">-13</span><br><span class="hljs-attr">categories:</span><br><span class="hljs-bullet">  -</span> <span class="hljs-string">Web</span><br><span class="hljs-attr">tags:</span><br><span class="hljs-bullet">  -</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Page</span><br><span class="hljs-bullet">  -</span> <span class="hljs-string">Hexo</span><br><span class="hljs-bullet">  -</span> <span class="hljs-string">Aria</span><br><span class="hljs-meta">---</span><br><br><span class="hljs-string">...说到底，还是喜欢折腾啊。</span><br><span class="hljs-string">&lt;!--</span> <span class="hljs-string">more</span> <span class="hljs-bullet">--&gt;</span><br></code></pre></td></tr></table></figure></p><h1 id="进阶阶段"><a href="#进阶阶段" class="headerlink" title="进阶阶段"></a>进阶阶段</h1><p>小白留空~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GitHub Page </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Aria </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>类库项目中 HWindowControl 类型的声明异常</title>
+      <link href="/2019/03/13/%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/"/>
+      <url>/2019/03/13/%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>在vs中新建<strong>类库项目</strong>，添加HalconDotNet引用，使用HWindowControl定义变量。<br><a id="more"></a></p><h1 id="1-运行环境（一）"><a href="#1-运行环境（一）" class="headerlink" title="1. 运行环境（一）"></a>1. 运行环境（一）</h1><ul><li>系统 - Windows 10</li><li>Halcon版本 - 12.0.0</li><li>vs版本 - 2015/2017</li></ul><p>编译运行，无任何错误。</p><h1 id="2-运行环境（二）"><a href="#2-运行环境（二）" class="headerlink" title="2. 运行环境（二）"></a>2. 运行环境（二）</h1><ul><li>系统 - Windows 10</li><li>Halcon版本 - 12.0.0</li><li>vs版本 - 2010/2013</li></ul><p>编译错误</p><figure class="hljs highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">类型“<span class="hljs-selector-tag">System</span><span class="hljs-selector-class">.Windows</span><span class="hljs-selector-class">.Forms</span><span class="hljs-selector-class">.UserControl</span>”在未被引用的程序集中定义，必须添加对程序集"类型“<span class="hljs-selector-tag">System</span><span class="hljs-selector-class">.Windows</span><span class="hljs-selector-class">.Forms</span>..."的引用<br></code></pre></td></tr></table></figure><p>解决方式</p><p>添加 <strong>System.Windows.Forms</strong> 引用后编译通过。</p><h1 id="3-解析"><a href="#3-解析" class="headerlink" title="3. 解析"></a>3. 解析</h1><p>这里算不上解析吧，网上也难以找到相关说明，纯属个人推测。HWindowControl这个控件应该是Halcon官方使用 System.Windows.Forms.UserControl 进行定义的，封装成DLL后，由于vs2010和vs2013的编译器不够智能，或者是编译器bug，所以编译出错了。vs2017对编译器进行了改进，识别出了该控件及其引用，或者说修复了这个bug。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# &amp; Halcon 联合编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# </tag>
+            
+            <tag> Halcon </tag>
+            
+            <tag> HWindowControl </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+  
+</search>

@@ -131,7 +131,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>归档 | 郑大峰的博客</title>
+    <title>类库项目中 HWindowControl 类型的声明异常 | 郑大峰的博客</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -171,48 +171,100 @@
         <div class="main-container">
           <div class="content">
             
-<div id="archive" class="archive page">
-  <h1 class="page-title">归档</h1>
-  <h2 class="page-counter">
-    
-    你已经写了 2 篇文章！
-    
-  </h2>
-  
-  
-  
-  
-  <h2 class="page-title">2019
+<div id="post" class="page">
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2019/03/13/基于GitHub-Page-&-Hexo-&-Aria的建站过程/" itemprop="url">基于 GitHub Page && Hexo && Aria 的建站过程</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-13T00:00:00+08:00">03-13</time>
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://zhengdafeng.github.io/2019/03/13/类库项目中HWindowControl类型声明问题/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="Jeff Cheng">
+       <meta itemprop="description" content>
+       <meta itemprop="image" content="/images/avatar.png">
       </span>
-      
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="郑大峰的博客">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">类库项目中 HWindowControl 类型的声明异常</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-13T00:00:00+08:00">2019-03-13 00:00:00</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-Halcon-联合编程/" itemprop="url" rel="index"><span itemprop="name">C# & Halcon 联合编程</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
     </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>在vs中新建<strong>类库项目</strong>，添加HalconDotNet引用，使用HWindowControl定义变量。<br><a id="more"></a></p>
+<h1 id="1-运行环境（一）"><a href="#1-运行环境（一）" class="headerlink" title="1. 运行环境（一）"></a>1. 运行环境（一）</h1><ul>
+<li>系统 - Windows 10</li>
+<li>Halcon版本 - 12.0.0</li>
+<li>vs版本 - 2015/2017</li>
+</ul>
+<p>编译运行，无任何错误。</p>
+<h1 id="2-运行环境（二）"><a href="#2-运行环境（二）" class="headerlink" title="2. 运行环境（二）"></a>2. 运行环境（二）</h1><ul>
+<li>系统 - Windows 10</li>
+<li>Halcon版本 - 12.0.0</li>
+<li>vs版本 - 2010/2013</li>
+</ul>
+<p>编译错误</p>
+<figure class="hljs highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">类型“<span class="hljs-selector-tag">System</span><span class="hljs-selector-class">.Windows</span><span class="hljs-selector-class">.Forms</span><span class="hljs-selector-class">.UserControl</span>”在未被引用的程序集中定义，必须添加对程序集"类型“<span class="hljs-selector-tag">System</span><span class="hljs-selector-class">.Windows</span><span class="hljs-selector-class">.Forms</span>..."的引用<br></code></pre></td></tr></table></figure>
+<p>解决方式</p>
+<p>添加 <strong>System.Windows.Forms</strong> 引用后编译通过。</p>
+<h1 id="3-解析"><a href="#3-解析" class="headerlink" title="3. 解析"></a>3. 解析</h1><p>这里算不上解析吧，网上也难以找到相关说明，纯属个人推测。HWindowControl这个控件应该是Halcon官方使用 System.Windows.Forms.UserControl 进行定义的，封装成DLL后，由于vs2010和vs2013的编译器不够智能，或者是编译器bug，所以编译出错了。vs2017对编译器进行了改进，识别出了该控件及其引用，或者说修复了这个bug。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/c/" rel="tag"><i class="fas fa-tags"></i>c#</a>
+        
+        <a class="post-tag button" href="/tags/Halcon/" rel="tag"><i class="fas fa-tags"></i>Halcon</a>
+        
+        <a class="post-tag button" href="/tags/HWindowControl/" rel="tag"><i class="fas fa-tags"></i>HWindowControl</a>
+        
+      </div>
+      
+    </footer>
   </article>
   
   
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2019/03/13/类库项目中HWindowControl类型声明问题/" itemprop="url">类库项目中 HWindowControl 类型的声明异常</a>
-      </h1>
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
       
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-13T00:00:00+08:00">03-13</time>
-      </span>
+    </div>
+    <div class="page-nav-prev page-nav-item">
       
-    </header>
-  </article>
+      <a href="/2019/03/13/基于GitHub-Page-&-Hexo-&-Aria的建站过程/" rel="prev" title="基于 GitHub Page && Hexo && Aria 的建站过程"><span class="nav-title">基于 GitHub Page && Hexo && Aria 的建站过程</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
   
   
-</h2></div>
+  
+
+<div class="comments" id="comments">
+  
+</div>
+
+
+
+  
+</div>
 
           </div>
           
@@ -269,6 +321,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#1-运行环境（一）"><span class="toc-text">1. 运行环境（一）</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#2-运行环境（二）"><span class="toc-text">2. 运行环境（二）</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#3-解析"><span class="toc-text">3. 解析</span></a></li></ol></div>
+    </div>
+    
     
     
     <hr>

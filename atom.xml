@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>郑大峰的博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://zhengdafeng.github.io/"/>
+  <updated>2019-03-13T08:25:31.803Z</updated>
+  <id>https://zhengdafeng.github.io/</id>
+  
+  <author>
+    <name>Jeff Cheng</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于 GitHub Page &amp;&amp; Hexo &amp;&amp; Aria 的建站过程</title>
+    <link href="https://zhengdafeng.github.io/2019/03/13/%E5%9F%BA%E4%BA%8EGitHub-Page-&amp;-Hexo-&amp;-Aria%E7%9A%84%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/"/>
+    <id>https://zhengdafeng.github.io/2019/03/13/基于GitHub-Page-&amp;-Hexo-&amp;-Aria的建站过程/</id>
+    <published>2019-03-12T16:00:00.000Z</published>
+    <updated>2019-03-13T08:25:31.803Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;…说到底，还是喜欢折腾啊。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="https://zhengdafeng.github.io/categories/Web/"/>
+    
+    
+      <category term="GitHub Page" scheme="https://zhengdafeng.github.io/tags/GitHub-Page/"/>
+    
+      <category term="Hexo" scheme="https://zhengdafeng.github.io/tags/Hexo/"/>
+    
+      <category term="Aria" scheme="https://zhengdafeng.github.io/tags/Aria/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>类库项目中 HWindowControl 类型的声明异常</title>
+    <link href="https://zhengdafeng.github.io/2019/03/13/%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/"/>
+    <id>https://zhengdafeng.github.io/2019/03/13/类库项目中HWindowControl类型声明问题/</id>
+    <published>2019-03-12T16:00:00.000Z</published>
+    <updated>2019-03-13T08:25:22.266Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在vs中新建&lt;strong&gt;类库项目&lt;/strong&gt;，添加HalconDotNet引用，使用HWindowControl定义变量。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="C# &amp; Halcon 联合编程" scheme="https://zhengdafeng.github.io/categories/C-Halcon-%E8%81%94%E5%90%88%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="c#" scheme="https://zhengdafeng.github.io/tags/c/"/>
+    
+      <category term="Halcon" scheme="https://zhengdafeng.github.io/tags/Halcon/"/>
+    
+      <category term="HWindowControl" scheme="https://zhengdafeng.github.io/tags/HWindowControl/"/>
+    
+  </entry>
+  
+</feed>
