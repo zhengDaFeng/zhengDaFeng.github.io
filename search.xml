@@ -4,6 +4,93 @@
   
     
     <entry>
+      <title>在派生类中引发基类事件</title>
+      <link href="/2019/03/14/%E5%9C%A8%E6%B4%BE%E7%94%9F%E7%B1%BB%E4%B8%AD%E5%BC%95%E5%8F%91%E5%9F%BA%E7%B1%BB%E4%BA%8B%E4%BB%B6/"/>
+      <url>/2019/03/14/%E5%9C%A8%E6%B4%BE%E7%94%9F%E7%B1%BB%E4%B8%AD%E5%BC%95%E5%8F%91%E5%9F%BA%E7%B1%BB%E4%BA%8B%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p>首先，你必须知道以下规则：</p><ul><li>事件是特殊类型的委托，只能从声明它们的类中进行调用。 派生类不能直接调用在基类中声明的事件。</li><li>不要在基类中声明虚拟事件并在派生类中重写它们。 C#编译器不会处理这些事件，并且无法预知派生事件的订阅者是否实际上会订阅基类事件。<a id="more"></a></li></ul><h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>基类<br><figure class="hljs highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">BaseBusiness</span><br>&#123;<br>    <span class="hljs-comment">//声明事件委托</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ProgressEventHandler</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> progress, <span class="hljs-keyword">string</span> msg</span>)</span>;<br>    <span class="hljs-comment">//声明事件</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">event</span> ProgressEventHandler ProgressEvent;<br><br>    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnProgress</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> progress, <span class="hljs-keyword">string</span> msg</span>)</span><br>    &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.ProgressEvent != <span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">this</span>.ProgressEvent(progress, msg);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></p><p>派生类<br><figure class="hljs highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MyBusiness</span> : <span class="hljs-title">BaseBusiness</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyBusiness</span>(<span class="hljs-params"></span>)</span><br>    &#123;<br>        <span class="hljs-comment">//  可以直接调用基类的方法</span><br>        <span class="hljs-keyword">this</span>.OnProgress(<span class="hljs-keyword">this</span>.OnProgressValue, <span class="hljs-string">"Testing..."</span>);            <br>    &#125;<br><br>    <span class="hljs-comment">//  可以重写基类的方法</span><br>    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnProgress</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> progress, <span class="hljs-keyword">string</span> msg</span>)</span><br>    &#123;<br>        <span class="hljs-comment">// 在这里添加其他处理代码</span><br>        <span class="hljs-keyword">base</span>.OnProgress(progress, msg);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes" target="_blank" rel="noopener">《如何：在派生类中引发基类事件（C# 编程指南）》</a></li><li><a href="http://www.cnblogs.com/anjou/archive/2007/06/19/788987.html" target="_blank" rel="noopener">《C# 事件的继承》</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 继承 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>工厂模式</title>
+      <link href="/2019/03/14/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2019/03/14/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<p>最近在写一款激光分析软件，其中有一项需求是支持多种品牌的相机取像，第一时间便想到了工厂模式。<br><a id="more"></a></p><h1 id="一般情况"><a href="#一般情况" class="headerlink" title="一般情况"></a>一般情况</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="hljs highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Camera</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Open</span>(<span class="hljs-params"></span>)</span>;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">AVT_Camera</span> : <span class="hljs-title">Camera</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Open</span>(<span class="hljs-params"></span>)</span><br>    &#123;<br>        System.Diagnostics.Debug.WriteLine(<span class="hljs-string">"AVT Opened."</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">IDS_Camera</span> : <span class="hljs-title">Camera</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Open</span>(<span class="hljs-params"></span>)</span><br>    &#123;<br>        System.Diagnostics.Debug.WriteLine(<span class="hljs-string">"IDS Opened."</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="调用。"><a href="#调用。" class="headerlink" title="调用。"></a>调用。</h2><figure class="hljs highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>&#123;</span><br>    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span><span class="hljs-params">(<span class="hljs-built_in">string</span>[] args)</span><br>    </span>&#123;<br>        Camera m_AVT_Camera;<br>        m_AVT_Camera = <span class="hljs-keyword">new</span> AVT_Camera();<br>        m_AVT_Camera.Open();<br><br>        Camera m_IDS_Camera;<br>        m_IDS_Camera = <span class="hljs-keyword">new</span> IDS_Camera();<br>        m_IDS_Camera.Open();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>在一般代码中，我们可以自己根据自己的需求创建相应的实例，不过这样会造成一个后果，就是调用者与被调用者之间有直接的依赖关系。为了降低对象之间的耦合度，便有了简单工厂模式。</p><h1 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h1><h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="hljs highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-comment">// 一般代码的基础上添加下面代码</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">CameraType</span><br>&#123;</span><br>    AVT, IDS<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CameraSimpleFactory</span><br></span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Camera CreateCamera(CameraType type)<br>    &#123;<br>        Camera camera;<br>        <span class="hljs-keyword">switch</span> (type)<br>        &#123;<br>            <span class="hljs-keyword">case</span> CameraType.AVT:<span class="hljs-type"></span><br>                camera = <span class="hljs-keyword">new</span> <span class="hljs-type">AVT_Camera</span>();<br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">case</span> CameraType.IDS:<span class="hljs-type"></span><br>                camera = <span class="hljs-keyword">new</span> <span class="hljs-type">IDS_Camera</span>();<br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">default</span>:<span class="hljs-type"></span><br>                camera = <span class="hljs-literal">null</span>;<br>                <span class="hljs-keyword">break</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> camera;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h2><figure class="hljs highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-type">Program</span><br>&#123;<br>    static void <span class="hljs-type">Main</span>(<span class="hljs-title">string</span>[] <span class="hljs-title">args</span>)<br>    &#123;<br>        <span class="hljs-type">Camera</span> m_AVT_Camera;<br>        m_AVT_Camera = <span class="hljs-type">CameraSimpleFactory</span>.<span class="hljs-type">CreateCamera</span>(<span class="hljs-type">CameraType</span>.<span class="hljs-type">AVT</span>);<br>        m_AVT_Camera.<span class="hljs-type">Open</span>();<br><br>        <span class="hljs-type">Camera</span> m_IDS_Camera;<br>        m_IDS_Camera = <span class="hljs-type">CameraSimpleFactory</span>.<span class="hljs-type">CreateCamera</span>(<span class="hljs-type">CameraType</span>.<span class="hljs-type">IDS</span>);<br>        m_IDS_Camera.<span class="hljs-type">Open</span>();<br>    &#125;<br>&#125;</span><br></code></pre></td></tr></table></figure><h2 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h2><p>可以看到创建实例的逻辑被转移了，优点是责任分割和解耦。但是简单工厂有一个问题，就是当你想要新增一个产品实例的时候，必须修改代码，系统扩展性比较差。于是工厂模式应运而生。</p><h1 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h1><h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="hljs highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-comment">// 一般代码的基础上添加下面代码</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CameraFactory</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> Camera <span class="hljs-title">CreateCamera</span>(<span class="hljs-params"></span>)</span>;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">AVT_CameraFactory</span> : <span class="hljs-title">CameraFactory</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> Camera <span class="hljs-title">CreateCamera</span>(<span class="hljs-params"></span>)</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AVT_Camera();<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">IDS_CameraFactory</span> : <span class="hljs-title">CameraFactory</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> Camera <span class="hljs-title">CreateCamera</span>(<span class="hljs-params"></span>)</span><br>    &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> IDS_Camera();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="调用-1"><a href="#调用-1" class="headerlink" title="调用"></a>调用</h2><figure class="hljs highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs undefined">class Program<br>&#123;<br>    static void Main(string[] args)<br>    &#123;<br>        AVT_CameraFactory m_AVT_CameraFactory = new AVT_CameraFactory()<span class="hljs-comment">;</span><br>        Camera m_AVT_Camera<span class="hljs-comment">;</span><br>        m_AVT_Camera = m_AVT_CameraFactory.CreateCamera()<span class="hljs-comment">;</span><br>        m_AVT_Camera.Open()<span class="hljs-comment">;</span><br><br>        IDS_CameraFactory m_IDS_CameraFactory = new IDS_CameraFactory()<span class="hljs-comment">;</span><br>        Camera m_IDS_Camera<span class="hljs-comment">;</span><br>        m_IDS_Camera = m_IDS_CameraFactory.CreateCamera()<span class="hljs-comment">;</span><br>        m_IDS_Camera.Open()<span class="hljs-comment">;</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h2><p>可以看到，我们将实例的创建类给抽象了，然后将具体实例的实现转移到了他的子类中去。这样当我们新增一个产品时，便只需要新增产品具体类和创建该产品实例的工厂具体类，而不需要去修改原有代码，提高了系统的扩展性。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 设计模式 </tag>
+            
+            <tag> 简单工厂模式 </tag>
+            
+            <tag> 工厂模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>类库项目中 HWindowControl 类型的声明异常</title>
+      <link href="/2019/03/13/%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/"/>
+      <url>/2019/03/13/%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>在vs中新建<strong>类库项目</strong>，添加HalconDotNet引用，使用HWindowControl定义变量。<br><a id="more"></a></p><h1 id="1-运行环境（一）"><a href="#1-运行环境（一）" class="headerlink" title="1. 运行环境（一）"></a>1. 运行环境（一）</h1><ul><li>系统 - Windows 10</li><li>Halcon版本 - 12.0.0</li><li>vs版本 - 2015/2017</li></ul><p>编译运行，无任何错误。</p><h1 id="2-运行环境（二）"><a href="#2-运行环境（二）" class="headerlink" title="2. 运行环境（二）"></a>2. 运行环境（二）</h1><ul><li>系统 - Windows 10</li><li>Halcon版本 - 12.0.0</li><li>vs版本 - 2010/2013</li></ul><p>编译错误</p><figure class="hljs highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">类型“<span class="hljs-selector-tag">System</span><span class="hljs-selector-class">.Windows</span><span class="hljs-selector-class">.Forms</span><span class="hljs-selector-class">.UserControl</span>”在未被引用的程序集中定义，必须添加对程序集"类型“<span class="hljs-selector-tag">System</span><span class="hljs-selector-class">.Windows</span><span class="hljs-selector-class">.Forms</span>..."的引用<br></code></pre></td></tr></table></figure><p>解决方式</p><p>添加 <strong>System.Windows.Forms</strong> 引用后编译通过。</p><h1 id="3-解析"><a href="#3-解析" class="headerlink" title="3. 解析"></a>3. 解析</h1><p>这里算不上解析吧，网上也难以找到相关说明，纯属个人推测。HWindowControl这个控件应该是Halcon官方使用 System.Windows.Forms.UserControl 进行定义的，封装成DLL后，由于vs2010和vs2013的编译器不够智能，或者是编译器bug，所以编译出错了。vs2017对编译器进行了改进，识别出了该控件及其引用，或者说修复了这个bug。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# &amp; Halcon 联合编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Halcon </tag>
+            
+            <tag> HWindowControl </tag>
+            
+            <tag> C# </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于 GitHub Page &amp;&amp; Hexo &amp;&amp; Aria 的建站过程</title>
       <link href="/2019/03/13/%E5%9F%BA%E4%BA%8EGitHub-Page-&amp;-Hexo-&amp;-Aria%E7%9A%84%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/"/>
       <url>/2019/03/13/%E5%9F%BA%E4%BA%8EGitHub-Page-&amp;-Hexo-&amp;-Aria%E7%9A%84%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/</url>
@@ -31,35 +118,6 @@
     </entry>
     
     
-    
-    <entry>
-      <title>类库项目中 HWindowControl 类型的声明异常</title>
-      <link href="/2019/03/13/%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/"/>
-      <url>/2019/03/13/%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/</url>
-      
-        <content type="html"><![CDATA[<p>在vs中新建<strong>类库项目</strong>，添加HalconDotNet引用，使用HWindowControl定义变量。<br><a id="more"></a></p><h1 id="1-运行环境（一）"><a href="#1-运行环境（一）" class="headerlink" title="1. 运行环境（一）"></a>1. 运行环境（一）</h1><ul><li>系统 - Windows 10</li><li>Halcon版本 - 12.0.0</li><li>vs版本 - 2015/2017</li></ul><p>编译运行，无任何错误。</p><h1 id="2-运行环境（二）"><a href="#2-运行环境（二）" class="headerlink" title="2. 运行环境（二）"></a>2. 运行环境（二）</h1><ul><li>系统 - Windows 10</li><li>Halcon版本 - 12.0.0</li><li>vs版本 - 2010/2013</li></ul><p>编译错误</p><figure class="hljs highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">类型“<span class="hljs-selector-tag">System</span><span class="hljs-selector-class">.Windows</span><span class="hljs-selector-class">.Forms</span><span class="hljs-selector-class">.UserControl</span>”在未被引用的程序集中定义，必须添加对程序集"类型“<span class="hljs-selector-tag">System</span><span class="hljs-selector-class">.Windows</span><span class="hljs-selector-class">.Forms</span>..."的引用<br></code></pre></td></tr></table></figure><p>解决方式</p><p>添加 <strong>System.Windows.Forms</strong> 引用后编译通过。</p><h1 id="3-解析"><a href="#3-解析" class="headerlink" title="3. 解析"></a>3. 解析</h1><p>这里算不上解析吧，网上也难以找到相关说明，纯属个人推测。HWindowControl这个控件应该是Halcon官方使用 System.Windows.Forms.UserControl 进行定义的，封装成DLL后，由于vs2010和vs2013的编译器不够智能，或者是编译器bug，所以编译出错了。vs2017对编译器进行了改进，识别出了该控件及其引用，或者说修复了这个bug。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> C# &amp; Halcon 联合编程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# </tag>
-            
-            <tag> Halcon </tag>
-            
-            <tag> HWindowControl </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
   
   
     
@@ -68,6 +126,17 @@
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index-1.html"/>
+      <url>/tags/index-1.html</url>
       
         <content type="html"><![CDATA[]]></content>
       

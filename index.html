@@ -176,6 +176,177 @@
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://zhengdafeng.github.io/2019/03/14/在派生类中引发基类事件/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Jeff Cheng">
+        <meta itemprop="description" content>
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="郑大峰的博客">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2019/03/14/在派生类中引发基类事件/" itemprop="url">在派生类中引发基类事件</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-14T12:00:00+08:00">2019-03-14 12:00:00</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p>首先，你必须知道以下规则：</p>
+<ul>
+<li>事件是特殊类型的委托，只能从声明它们的类中进行调用。 派生类不能直接调用在基类中声明的事件。</li>
+<li>不要在基类中声明虚拟事件并在派生类中重写它们。 C#编译器不会处理这些事件，并且无法预知派生事件的订阅者是否实际上会订阅基类事件。
+      
+    </li></ul></main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/C/" rel="tag"><i class="fas fa-tags"></i>C#</a>
+        
+        <a class="post-tag button" href="/tags/继承/" rel="tag"><i class="fas fa-tags"></i>继承</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://zhengdafeng.github.io/2019/03/14/简单工厂模式和工厂模式/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Jeff Cheng">
+        <meta itemprop="description" content>
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="郑大峰的博客">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2019/03/14/简单工厂模式和工厂模式/" itemprop="url">工厂模式</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-14T10:44:00+08:00">2019-03-14 10:44:00</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p>最近在写一款激光分析软件，其中有一项需求是支持多种品牌的相机取像，第一时间便想到了工厂模式。<br>
+      
+    </p></main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/C/" rel="tag"><i class="fas fa-tags"></i>C#</a>
+        
+        <a class="post-tag button" href="/tags/设计模式/" rel="tag"><i class="fas fa-tags"></i>设计模式</a>
+        
+        <a class="post-tag button" href="/tags/简单工厂模式/" rel="tag"><i class="fas fa-tags"></i>简单工厂模式</a>
+        
+        <a class="post-tag button" href="/tags/工厂模式/" rel="tag"><i class="fas fa-tags"></i>工厂模式</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://zhengdafeng.github.io/2019/03/13/类库项目中HWindowControl类型声明问题/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Jeff Cheng">
+        <meta itemprop="description" content>
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="郑大峰的博客">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2019/03/13/类库项目中HWindowControl类型声明问题/" itemprop="url">类库项目中 HWindowControl 类型的声明异常</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-13T16:24:00+08:00">2019-03-13 16:24:00</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-Halcon-联合编程/" itemprop="url" rel="index"><span itemprop="name">C# & Halcon 联合编程</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p>在vs中新建<strong>类库项目</strong>，添加HalconDotNet引用，使用HWindowControl定义变量。<br>
+      
+    </p></main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/Halcon/" rel="tag"><i class="fas fa-tags"></i>Halcon</a>
+        
+        <a class="post-tag button" href="/tags/HWindowControl/" rel="tag"><i class="fas fa-tags"></i>HWindowControl</a>
+        
+        <a class="post-tag button" href="/tags/C/" rel="tag"><i class="fas fa-tags"></i>C#</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="https://zhengdafeng.github.io/2019/03/13/基于GitHub-Page-&-Hexo-&-Aria的建站过程/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="Jeff Cheng">
@@ -193,7 +364,7 @@
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-13T00:00:00+08:00">2019-03-13 00:00:00</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-13T13:46:00+08:00">2019-03-13 13:46:00</time></span>
         </span>
         
         
@@ -224,62 +395,6 @@
         <a class="post-tag button" href="/tags/Hexo/" rel="tag"><i class="fas fa-tags"></i>Hexo</a>
         
         <a class="post-tag button" href="/tags/Aria/" rel="tag"><i class="fas fa-tags"></i>Aria</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://zhengdafeng.github.io/2019/03/13/类库项目中HWindowControl类型声明问题/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Jeff Cheng">
-        <meta itemprop="description" content>
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="郑大峰的博客">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2019/03/13/类库项目中HWindowControl类型声明问题/" itemprop="url">类库项目中 HWindowControl 类型的声明异常</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-13T00:00:00+08:00">2019-03-13 00:00:00</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-Halcon-联合编程/" itemprop="url" rel="index"><span itemprop="name">C# & Halcon 联合编程</span></a></span>
-        </span>
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      <p>在vs中新建<strong>类库项目</strong>，添加HalconDotNet引用，使用HWindowControl定义变量。<br>
-      
-    </p></main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/c/" rel="tag"><i class="fas fa-tags"></i>c#</a>
-        
-        <a class="post-tag button" href="/tags/Halcon/" rel="tag"><i class="fas fa-tags"></i>Halcon</a>
-        
-        <a class="post-tag button" href="/tags/HWindowControl/" rel="tag"><i class="fas fa-tags"></i>HWindowControl</a>
         
       </div>
       
@@ -326,21 +441,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">2</a></div>
+      <div><a href="/archives/">4</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">2</a></div>
+      <div><a href="/categories/">4</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">6</a></div>
+      <div><a href="/tags/">11</a></div>
     </div>
     
     

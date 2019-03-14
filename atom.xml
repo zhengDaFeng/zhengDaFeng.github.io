@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhengdafeng.github.io/"/>
-  <updated>2019-03-13T08:25:31.803Z</updated>
+  <updated>2019-03-14T04:16:00.789Z</updated>
   <id>https://zhengdafeng.github.io/</id>
   
   <author>
@@ -17,11 +17,86 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>在派生类中引发基类事件</title>
+    <link href="https://zhengdafeng.github.io/2019/03/14/%E5%9C%A8%E6%B4%BE%E7%94%9F%E7%B1%BB%E4%B8%AD%E5%BC%95%E5%8F%91%E5%9F%BA%E7%B1%BB%E4%BA%8B%E4%BB%B6/"/>
+    <id>https://zhengdafeng.github.io/2019/03/14/在派生类中引发基类事件/</id>
+    <published>2019-03-14T04:00:00.000Z</published>
+    <updated>2019-03-14T04:16:00.789Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先，你必须知道以下规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;事件是特殊类型的委托，只能从声明它们的类中进行调用。 派生类不能直接调用在基类中声明的事件。&lt;/li&gt;
+&lt;li&gt;不要在基类中声明虚拟事件并在派生类中重写它们。 C#编译器不会处理这些事件，并且无法预知派生事件的订阅者是否实际上会订阅基类事件。
+    
+    </summary>
+    
+      <category term="C#" scheme="https://zhengdafeng.github.io/categories/C/"/>
+    
+    
+      <category term="C#" scheme="https://zhengdafeng.github.io/tags/C/"/>
+    
+      <category term="继承" scheme="https://zhengdafeng.github.io/tags/%E7%BB%A7%E6%89%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工厂模式</title>
+    <link href="https://zhengdafeng.github.io/2019/03/14/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://zhengdafeng.github.io/2019/03/14/简单工厂模式和工厂模式/</id>
+    <published>2019-03-14T02:44:00.000Z</published>
+    <updated>2019-03-14T04:15:57.758Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在写一款激光分析软件，其中有一项需求是支持多种品牌的相机取像，第一时间便想到了工厂模式。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://zhengdafeng.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="C#" scheme="https://zhengdafeng.github.io/tags/C/"/>
+    
+      <category term="设计模式" scheme="https://zhengdafeng.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="简单工厂模式" scheme="https://zhengdafeng.github.io/tags/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="工厂模式" scheme="https://zhengdafeng.github.io/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>类库项目中 HWindowControl 类型的声明异常</title>
+    <link href="https://zhengdafeng.github.io/2019/03/13/%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/"/>
+    <id>https://zhengdafeng.github.io/2019/03/13/类库项目中HWindowControl类型声明问题/</id>
+    <published>2019-03-13T08:24:00.000Z</published>
+    <updated>2019-03-14T04:15:59.320Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在vs中新建&lt;strong&gt;类库项目&lt;/strong&gt;，添加HalconDotNet引用，使用HWindowControl定义变量。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="C# &amp; Halcon 联合编程" scheme="https://zhengdafeng.github.io/categories/C-Halcon-%E8%81%94%E5%90%88%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Halcon" scheme="https://zhengdafeng.github.io/tags/Halcon/"/>
+    
+      <category term="HWindowControl" scheme="https://zhengdafeng.github.io/tags/HWindowControl/"/>
+    
+      <category term="C#" scheme="https://zhengdafeng.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>基于 GitHub Page &amp;&amp; Hexo &amp;&amp; Aria 的建站过程</title>
     <link href="https://zhengdafeng.github.io/2019/03/13/%E5%9F%BA%E4%BA%8EGitHub-Page-&amp;-Hexo-&amp;-Aria%E7%9A%84%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/"/>
     <id>https://zhengdafeng.github.io/2019/03/13/基于GitHub-Page-&amp;-Hexo-&amp;-Aria的建站过程/</id>
-    <published>2019-03-12T16:00:00.000Z</published>
-    <updated>2019-03-13T08:25:31.803Z</updated>
+    <published>2019-03-13T05:46:00.000Z</published>
+    <updated>2019-03-14T02:44:06.460Z</updated>
     
     <summary type="html">
     
@@ -37,30 +112,6 @@
       <category term="Hexo" scheme="https://zhengdafeng.github.io/tags/Hexo/"/>
     
       <category term="Aria" scheme="https://zhengdafeng.github.io/tags/Aria/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>类库项目中 HWindowControl 类型的声明异常</title>
-    <link href="https://zhengdafeng.github.io/2019/03/13/%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/"/>
-    <id>https://zhengdafeng.github.io/2019/03/13/类库项目中HWindowControl类型声明问题/</id>
-    <published>2019-03-12T16:00:00.000Z</published>
-    <updated>2019-03-13T08:25:22.266Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在vs中新建&lt;strong&gt;类库项目&lt;/strong&gt;，添加HalconDotNet引用，使用HWindowControl定义变量。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="C# &amp; Halcon 联合编程" scheme="https://zhengdafeng.github.io/categories/C-Halcon-%E8%81%94%E5%90%88%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="c#" scheme="https://zhengdafeng.github.io/tags/c/"/>
-    
-      <category term="Halcon" scheme="https://zhengdafeng.github.io/tags/Halcon/"/>
-    
-      <category term="HWindowControl" scheme="https://zhengdafeng.github.io/tags/HWindowControl/"/>
     
   </entry>
   
