@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhengdafeng.github.io/"/>
-  <updated>2019-03-14T04:16:00.789Z</updated>
+  <updated>2019-03-19T03:53:01.116Z</updated>
   <id>https://zhengdafeng.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Halcon &amp;&amp; C# 联合编程时的内存管理</title>
+    <link href="https://zhengdafeng.github.io/2019/03/19/Halcon%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    <id>https://zhengdafeng.github.io/2019/03/19/Halcon 内存管理/</id>
+    <published>2019-03-19T03:45:00.000Z</published>
+    <updated>2019-03-19T03:53:01.116Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;C# 拥有强大的垃圾回收机制，这时优点，但有时候太过依赖它，反而会使我们失去了处理一些第三方对象的能力。而在 Halcon 与 C# 的联合编程中，Halcon 对象的内存管理便是很多人头痛的事情了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="内存管理" scheme="https://zhengdafeng.github.io/categories/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    
+    
+      <category term="Halcon" scheme="https://zhengdafeng.github.io/tags/Halcon/"/>
+    
+      <category term="C#" scheme="https://zhengdafeng.github.io/tags/C/"/>
+    
+      <category term="内存管理" scheme="https://zhengdafeng.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>获取Byte[]类型数据的指针</title>
+    <link href="https://zhengdafeng.github.io/2019/03/15/%E8%8E%B7%E5%8F%96Byte%5B%5D%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E6%8C%87%E9%92%88/"/>
+    <id>https://zhengdafeng.github.io/2019/03/15/获取Byte[]类型数据的指针/</id>
+    <published>2019-03-15T06:25:00.000Z</published>
+    <updated>2019-03-15T06:33:56.064Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用AVT相机SDK编程时，只能取回图像的Byte数据，而生成HImage需要图像数据的指针，所以需要这样的代码。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="C# 代码方案" scheme="https://zhengdafeng.github.io/categories/C-%E4%BB%A3%E7%A0%81%E6%96%B9%E6%A1%88/"/>
+    
+    
+      <category term="指针" scheme="https://zhengdafeng.github.io/tags/%E6%8C%87%E9%92%88/"/>
+    
+      <category term="Byte数组" scheme="https://zhengdafeng.github.io/tags/Byte%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>在派生类中引发基类事件</title>

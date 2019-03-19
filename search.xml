@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>Halcon &amp;&amp; C# 联合编程时的内存管理</title>
+      <link href="/2019/03/19/Halcon%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+      <url>/2019/03/19/Halcon%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<p>C# 拥有强大的垃圾回收机制，这时优点，但有时候太过依赖它，反而会使我们失去了处理一些第三方对象的能力。而在 Halcon 与 C# 的联合编程中，Halcon 对象的内存管理便是很多人头痛的事情了。<br><a id="more"></a></p><h1 id="有无手动释放-Halcon-对象的对比"><a href="#有无手动释放-Halcon-对象的对比" class="headerlink" title="有无手动释放 Halcon 对象的对比"></a>有无手动释放 Halcon 对象的对比</h1><p>如果没有做好 Halcon 对象的及时释放时，便会发生内存泄漏问题，未释放的对象在内存中不断累积，当然，它不会无限累计下去， C# 会在适当的时候自动强制释放所有无用的对象。整个过程如下图所示。<br><img src="/images/Halcon内存泄漏.PNG" alt="Halcon内存泄漏.PNG"><br>同样的代码，当我们及时手动释放 Halcon 对象时，结果如下图所示，可以明显看出有没有及时手动释放 Halcon 对象的优劣。<br><img src="/images/Halcon内存管理.PNG" alt="Halcon内存管理.PNG"></p><h1 id="手动释放-Halcon-对象的正确姿势"><a href="#手动释放-Halcon-对象的正确姿势" class="headerlink" title="手动释放 Halcon 对象的正确姿势"></a>手动释放 Halcon 对象的正确姿势</h1><p>那么在什么时候释放 Halcon 对象呢？</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 内存管理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Halcon </tag>
+            
+            <tag> C# </tag>
+            
+            <tag> 内存管理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>获取Byte[]类型数据的指针</title>
+      <link href="/2019/03/15/%E8%8E%B7%E5%8F%96Byte%5B%5D%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E6%8C%87%E9%92%88/"/>
+      <url>/2019/03/15/%E8%8E%B7%E5%8F%96Byte%5B%5D%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E6%8C%87%E9%92%88/</url>
+      
+        <content type="html"><![CDATA[<p>使用AVT相机SDK编程时，只能取回图像的Byte数据，而生成HImage需要图像数据的指针，所以需要这样的代码。<br><a id="more"></a></p><h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs C#">// using System.Runtime.InteropServices;<br><br>GCHandle imgHandle = GCHandle.Alloc(imgdata, GCHandleType.Pinned);<br>IntPtr imgAddr = imgHandle.AddrOfPinnedObject();<br>imgHandle.Free();<br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# 代码方案 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 指针 </tag>
+            
+            <tag> Byte数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在派生类中引发基类事件</title>
       <link href="/2019/03/14/%E5%9C%A8%E6%B4%BE%E7%94%9F%E7%B1%BB%E4%B8%AD%E5%BC%95%E5%8F%91%E5%9F%BA%E7%B1%BB%E4%BA%8B%E4%BB%B6/"/>
       <url>/2019/03/14/%E5%9C%A8%E6%B4%BE%E7%94%9F%E7%B1%BB%E4%B8%AD%E5%BC%95%E5%8F%91%E5%9F%BA%E7%B1%BB%E4%BA%8B%E4%BB%B6/</url>
