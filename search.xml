@@ -4,6 +4,89 @@
   
     
     <entry>
+      <title>塑料物体表面缺陷检测</title>
+      <link href="/2019/03/25/%E5%A1%91%E6%96%99%E7%89%A9%E4%BD%93%E8%A1%A8%E9%9D%A2%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/"/>
+      <url>/2019/03/25/%E5%A1%91%E6%96%99%E7%89%A9%E4%BD%93%E8%A1%A8%E9%9D%A2%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/</url>
+      
+        <content type="html"><![CDATA[<p>例程：detect_indent_fft.hdev<br>说明：这个程序展示了如何利用快速傅里叶变换（FFT）对塑料制品的表面进行目标（缺陷）的检测。<a id="more"></a><br>整个示例大致可以分为三步：<br>首先，我们用高斯滤波器构造一个合适的滤波器（将原图通过高斯滤波器滤波）；<br>然后，将原图和构造的滤波器进行快速傅里叶变换；<br>最后，利用形态学算子将缺陷表示在滤波后的图片上（在缺陷上画圈）。</p><figure class="hljs highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><code class="hljs undefined">* Initializations<br>dev_update_off () * 该外部函数包含如下三个算子：<br>* dev_updata_pc(‘off’) 关闭更新程序计数器<br>* dev_updata_var(‘off’) 关闭更新变量窗口<br>* dev_updata_window(‘off’) 关闭更新图像窗口<br>dev_close_window ()<br>read_image (<span class="hljs-built_in">Image</span>, <span class="hljs-string">'plastics/plastics_01'</span>)<br>get_image_size (<span class="hljs-built_in">Image</span>, Width, Height)<br>dev_open_window (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, Width, Height, <span class="hljs-string">'black'</span>, WindowHandle)<br>set_display_font (WindowHandle, <span class="hljs-number">14</span>, <span class="hljs-string">'mono'</span>, <span class="hljs-string">'true'</span>, <span class="hljs-string">'false'</span>)<br>dev_set_draw (<span class="hljs-string">'margin'</span>)<br>dev_set_line_width (<span class="hljs-number">3</span>)<br>dev_set_color (<span class="hljs-string">'red'</span>)<br>* <br>* Optimize the fft <span class="hljs-built_in">speed</span> <span class="hljs-keyword">for</span> the specific <span class="hljs-built_in">image</span> <span class="hljs-built_in">size</span><br>optimize_rft_speed (Width, Height, <span class="hljs-string">'standard'</span>)<br>* <br>* Construct a suitable filter by combining two gaussian<br>* filters<br>Sigma1 := <span class="hljs-number">10.0</span><br>Sigma2 := <span class="hljs-number">3.0</span><br>gen_gauss_filter (GaussFilter1, Sigma1, Sigma1, <span class="hljs-number">0.0</span>, <span class="hljs-string">'none'</span>, <span class="hljs-string">'rft'</span>, Width, Height) * 在频域中生成高斯滤波器<br>gen_gauss_filter (GaussFilter2, Sigma2, Sigma2, <span class="hljs-number">0.0</span>, <span class="hljs-string">'none'</span>, <span class="hljs-string">'rft'</span>, Width, Height)<br>sub_image (GaussFilter1, GaussFilter2, Filter, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>)<br>* <br>* Process the images iteratively<br>NumImages := <span class="hljs-number">11</span><br><span class="hljs-keyword">for</span> Index := <span class="hljs-number">1</span> <span class="hljs-keyword">to</span> NumImages by <span class="hljs-number">1</span><br>    * <br>    * Read an <span class="hljs-built_in">image</span> <span class="hljs-built_in">and</span> convert it <span class="hljs-keyword">to</span> gray values<br>    read_image (<span class="hljs-built_in">Image</span>, <span class="hljs-string">'plastics/plastics_'</span> + Index$<span class="hljs-string">'02'</span>)<br>    rgb1_to_gray (<span class="hljs-built_in">Image</span>, <span class="hljs-built_in">Image</span>)<br>    * Perform the convolution <span class="hljs-built_in">in</span> the frequency domain<br>    rft_generic (<span class="hljs-built_in">Image</span>, ImageFFT, <span class="hljs-string">'to_freq'</span>, <span class="hljs-string">'none'</span>, <span class="hljs-string">'complex'</span>, Width)<br>    convol_fft (ImageFFT, Filter, ImageConvol)<br>    rft_generic (ImageConvol, ImageFiltered, <span class="hljs-string">'from_freq'</span>, <span class="hljs-string">'n'</span>, <span class="hljs-string">'real'</span>, Width)<br>    * <br>    * Process the filtered <span class="hljs-built_in">image</span><br>    gray_range_rect (ImageFiltered, ImageResult, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>)<br>    min_max_gray (ImageResult, ImageResult, <span class="hljs-number">0</span>, <span class="hljs-built_in">Min</span>, <span class="hljs-built_in">Max</span>, Range)<br>    threshold (ImageResult, RegionDynThresh, <span class="hljs-built_in">max</span>([<span class="hljs-number">5.55</span>,<span class="hljs-built_in">Max</span> * <span class="hljs-number">0.8</span>]), <span class="hljs-number">255</span>)<br>    connection (RegionDynThresh, ConnectedRegions)<br>    select_shape (ConnectedRegions, SelectedRegions, <span class="hljs-string">'area'</span>, <span class="hljs-string">'and'</span>, <span class="hljs-number">4</span>, <span class="hljs-number">99999</span>)<br>    union1 (SelectedRegions, RegionUnion)<br>    closing_circle (RegionUnion, RegionClosing, <span class="hljs-number">10</span>)<br>    connection (RegionClosing, ConnectedRegions1)<br>    select_shape (ConnectedRegions1, SelectedRegions1, <span class="hljs-string">'area'</span>, <span class="hljs-string">'and'</span>, <span class="hljs-number">10</span>, <span class="hljs-number">99999</span>)<br>    area_center (SelectedRegions1, Area, Row, Column)<br>    * <br>    * Display the results<br>    dev_display (<span class="hljs-built_in">Image</span>)<br>    Number := |Area|<br>    <span class="hljs-keyword">if</span> (Number)<br>        gen_circle_contour_xld (ContCircle, Row, Column, gen_tuple_const(Number,<span class="hljs-number">30</span>), gen_tuple_const(Number,<span class="hljs-number">0</span>), gen_tuple_const(Number,<span class="hljs-built_in">rad</span>(<span class="hljs-number">360</span>)), <span class="hljs-string">'positive'</span>, <span class="hljs-number">1</span>)<br>        ResultMessage := [<span class="hljs-string">'Not OK'</span>,Number + <span class="hljs-string">' defect(s) found'</span>]<br>        Color := [<span class="hljs-string">'red'</span>,<span class="hljs-string">'black'</span>]<br>        dev_display (ContCircle)<br>    <span class="hljs-keyword">else</span><br>        ResultMessage := <span class="hljs-string">'OK'</span><br>        Color := <span class="hljs-string">'forest green'</span><br>    endif<br>    disp_message (WindowHandle, ResultMessage, <span class="hljs-string">'window'</span>, <span class="hljs-number">12</span>, <span class="hljs-number">12</span>, Color, <span class="hljs-string">'true'</span>)<br>    <span class="hljs-keyword">if</span> (Index != NumImages)<br>        disp_continue_message (WindowHandle, <span class="hljs-string">'black'</span>, <span class="hljs-string">'true'</span>)<br>        <span class="hljs-built_in">stop</span> ()<br>    endif<br>endfor<br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Halcon 示例程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 表面检测 </tag>
+            
+            <tag> 塑料物体 </tag>
+            
+            <tag> 快速傅里叶变换 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的技能</title>
+      <link href="/2019/03/25/%E6%88%91%E7%9A%84%E6%8A%80%E8%83%BD/"/>
+      <url>/2019/03/25/%E6%88%91%E7%9A%84%E6%8A%80%E8%83%BD/</url>
+      
+        <content type="html"><![CDATA[<p>再忙也应该整理、总结自己的知识，不然一切都会变成过眼云烟。<br><a id="more"></a></p><p><img src="/images/我的技能.PNG" alt="我的技能.PNG"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 我 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 个人信息 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>边缘检测</title>
+      <link href="/2019/03/25/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"/>
+      <url>/2019/03/25/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</url>
+      
+        <content type="html"><![CDATA[<p>边缘检测（英语：Edge detection）标识数字图像中亮度变化明显的点。<br><a id="more"></a></p><h1 id="（一）分类"><a href="#（一）分类" class="headerlink" title="（一）分类"></a>（一）分类</h1><ul><li>一阶梯度算法：Robert、Sobel、Prewitt、Canny</li><li>二阶梯度算法：Marr-Hildreth</li></ul><h1 id="（二）比较"><a href="#（二）比较" class="headerlink" title="（二）比较"></a>（二）比较</h1><h2 id="1-定位精度"><a href="#1-定位精度" class="headerlink" title="1. 定位精度"></a>1. 定位精度</h2><p>(1) Robert算法边缘定位精度较高，但容易丢失部分边缘。</p><p>(2) Sobel算法和Prewitt算法的边缘定位较准确且完整，但容易出现边缘多像素宽度。</p><p>(3) Canny算法效果较好，边缘定位准确性高，边缘较细，提取完整。</p><h2 id="2-边缘连接程度"><a href="#2-边缘连接程度" class="headerlink" title="2. 边缘连接程度"></a>2. 边缘连接程度</h2><p>(1) Robert的边缘连接程度较差，存在的错检漏检情况较多；</p><p>(2) Sobel和Prewitt其次；</p><p>(3) Canny的边缘线形连接程度最好，效果最佳，计算结果与人类视觉特性很吻合。</p><h2 id="3-抗噪性能"><a href="#3-抗噪性能" class="headerlink" title="3. 抗噪性能"></a>3. 抗噪性能</h2><p>(1) Roberts算法没经过图像平滑计算，对噪声较敏感，但对灰度变化陡峭的低噪声图像处理效果较好，处理对比度低且较暗图像的能力较差。</p><p>(2) Sobel算法和Prewitt算法都是对图像进行差分和滤波运算，只是平滑部分的权值有些差异，因此，对噪声具有一定抑制能力，但所得图像会有些模糊。</p><p>(3) Canny算法抗噪能力最佳，边缘定位准确性较好。</p><h2 id="4-运算速度："><a href="#4-运算速度：" class="headerlink" title="4. 运算速度："></a>4. 运算速度：</h2><p>(1) Robert算法简单，运算速度最快；</p><p>(2) Sobel算法和Prewitt算法较复杂，运算时间较长；</p><p>(3) Canny算法的运算量最大，耗时最多。</p><h1 id="（三）参考"><a href="#（三）参考" class="headerlink" title="（三）参考"></a>（三）参考</h1><p>[1] 陈彦燕, 王元庆. 常用边缘检测算法的定量比较. 计算机工程, 2008,1000—3428(2008)17—0202—03.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 边缘检测 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 边缘检测 </tag>
+            
+            <tag> canny </tag>
+            
+            <tag> sobel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Halcon &amp;&amp; C# 联合编程时的内存管理</title>
       <link href="/2019/03/19/Halcon%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
       <url>/2019/03/19/Halcon%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</url>

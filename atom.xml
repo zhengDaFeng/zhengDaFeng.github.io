@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhengdafeng.github.io/"/>
-  <updated>2019-03-19T03:53:01.116Z</updated>
+  <updated>2019-03-25T09:49:04.451Z</updated>
   <id>https://zhengdafeng.github.io/</id>
   
   <author>
@@ -15,6 +15,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>塑料物体表面缺陷检测</title>
+    <link href="https://zhengdafeng.github.io/2019/03/25/%E5%A1%91%E6%96%99%E7%89%A9%E4%BD%93%E8%A1%A8%E9%9D%A2%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/"/>
+    <id>https://zhengdafeng.github.io/2019/03/25/塑料物体表面缺陷检测/</id>
+    <published>2019-03-25T08:47:00.000Z</published>
+    <updated>2019-03-25T09:49:04.451Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;例程：detect_indent_fft.hdev&lt;br&gt;说明：这个程序展示了如何利用快速傅里叶变换（FFT）对塑料制品的表面进行目标（缺陷）的检测。
+    
+    </summary>
+    
+      <category term="Halcon 示例程序" scheme="https://zhengdafeng.github.io/categories/Halcon-%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="表面检测" scheme="https://zhengdafeng.github.io/tags/%E8%A1%A8%E9%9D%A2%E6%A3%80%E6%B5%8B/"/>
+    
+      <category term="塑料物体" scheme="https://zhengdafeng.github.io/tags/%E5%A1%91%E6%96%99%E7%89%A9%E4%BD%93/"/>
+    
+      <category term="快速傅里叶变换" scheme="https://zhengdafeng.github.io/tags/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的技能</title>
+    <link href="https://zhengdafeng.github.io/2019/03/25/%E6%88%91%E7%9A%84%E6%8A%80%E8%83%BD/"/>
+    <id>https://zhengdafeng.github.io/2019/03/25/我的技能/</id>
+    <published>2019-03-25T05:41:00.000Z</published>
+    <updated>2019-03-25T07:42:48.760Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;再忙也应该整理、总结自己的知识，不然一切都会变成过眼云烟。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="我" scheme="https://zhengdafeng.github.io/categories/%E6%88%91/"/>
+    
+    
+      <category term="个人信息" scheme="https://zhengdafeng.github.io/tags/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>边缘检测</title>
+    <link href="https://zhengdafeng.github.io/2019/03/25/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"/>
+    <id>https://zhengdafeng.github.io/2019/03/25/边缘检测/</id>
+    <published>2019-03-25T05:37:00.000Z</published>
+    <updated>2019-03-25T08:46:24.666Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;边缘检测（英语：Edge detection）标识数字图像中亮度变化明显的点。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="边缘检测" scheme="https://zhengdafeng.github.io/categories/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"/>
+    
+    
+      <category term="边缘检测" scheme="https://zhengdafeng.github.io/tags/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"/>
+    
+      <category term="canny" scheme="https://zhengdafeng.github.io/tags/canny/"/>
+    
+      <category term="sobel" scheme="https://zhengdafeng.github.io/tags/sobel/"/>
+    
+  </entry>
   
   <entry>
     <title>Halcon &amp;&amp; C# 联合编程时的内存管理</title>
