@@ -131,7 +131,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>分类: Web | 郑大峰的博客</title>
+    <title>hexo && aria 博文置顶 | 郑大峰的博客</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -171,35 +171,88 @@
         <div class="main-container">
           <div class="content">
             
-<div id="category" class="category page">
-  <h1 class="page-title">Web</h1>
+<div id="post" class="page">
   
   <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2019/03/26/hexo && aria 博文置顶/" itemprop="url">hexo && aria 博文置顶</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-26T10:53:00+08:00">03-26</time>
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://zhengdafeng.github.io/2019/03/26/hexo && aria 博文置顶/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="Jeff Cheng">
+       <meta itemprop="description" content>
+       <meta itemprop="image" content="/images/avatar.png">
       </span>
-      
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="郑大峰的博客">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">hexo && aria 博文置顶</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-26T10:53:00+08:00">2019-03-26 10:53:00</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
     </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>关于 hexo 框架的博文置顶信息，网上还是挺多的，但是一来大多方法比较繁琐，二来貌似没有关于 aria 主题的置顶信息，所以我经过实践，写了这个博文。<br><a id="more"></a></p>
+<h1 id="Step-by-Step"><a href="#Step-by-Step" class="headerlink" title="Step by Step"></a>Step by Step</h1><ul>
+<li>安装插件 <a href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener">hexo-generator-index-pin-top</a></li>
+<li>修改主题配置（在文章标题下面添加“置顶”字样）<br>（1）找到配置文件 <code>\themes\aria\layout\index.njk</code><br>（2）定位到 <code>&lt;div class=&quot;post-meta&quot;&gt;</code><br>（3）添加如下信息  <figure class="hljs highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html">&#123;% if post.top %&#125;<br>    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-thumb-tack"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">7D26CD</span>&gt;</span>置顶<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"post-meta-divider"</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>&#123;% endif %&#125;<br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="http://wangwlj.com/2018/01/09/blog_pin_post/" target="_blank" rel="noopener">Hexo博客彻底解决置顶问题</a><br><a href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener">Hexo置顶插件hexo-generator-index-pin-top</a></p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/hexo/" rel="tag"><i class="fas fa-tags"></i>hexo</a>
+        
+        <a class="post-tag button" href="/tags/aria-theme/" rel="tag"><i class="fas fa-tags"></i>aria theme</a>
+        
+        <a class="post-tag button" href="/tags/置顶/" rel="tag"><i class="fas fa-tags"></i>置顶</a>
+        
+      </div>
+      
+    </footer>
   </article>
   
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2019/03/13/基于GitHub-Page-&-Hexo-&-Aria的建站过程/" itemprop="url">基于 GitHub Page && Hexo && Aria 的建站过程</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-13T13:46:00+08:00">03-13</time>
-      </span>
-      
-    </header>
-  </article>
   
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/03/25/塑料物体表面缺陷检测/" rel="next" title="塑料物体表面缺陷检测"><i class="fas fa-angle-left"></i><span class="nav-title">塑料物体表面缺陷检测</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+</div>
+
+
+
   
 </div>
 
@@ -258,6 +311,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#Step-by-Step"><span class="toc-text">Step by Step</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol></div>
+    </div>
+    
     
     
     <hr>

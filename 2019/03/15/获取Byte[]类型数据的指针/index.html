@@ -209,7 +209,7 @@
     </header>
     <main class="post-main" itemprop="articleBody">
       <p>使用AVT相机SDK编程时，只能取回图像的Byte数据，而生成HImage需要图像数据的指针，所以需要这样的代码。<br><a id="more"></a></p>
-<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs C#">// using System.Runtime.InteropServices;<br><br>GCHandle imgHandle = GCHandle.Alloc(imgdata, GCHandleType.Pinned);<br>IntPtr imgAddr = imgHandle.AddrOfPinnedObject();<br>imgHandle.Free();<br></code></pre></td></tr></table></figure>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="hljs highlight C#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs C#"><span class="hljs-comment">// using System.Runtime.InteropServices;</span><br><br>GCHandle imgHandle = GCHandle.Alloc(imgdata, GCHandleType.Pinned);<br>IntPtr imgAddr = imgHandle.AddrOfPinnedObject();<br>imgHandle.Free();<br></code></pre></td></tr></table></figure>
     </main>
     <footer class="post-footer">
       
@@ -277,7 +277,7 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">9</a></div>
+      <div><a href="/archives/">10</a></div>
     </div>
     
     
@@ -291,7 +291,7 @@
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">21</a></div>
+      <div><a href="/tags/">24</a></div>
     </div>
     
     
