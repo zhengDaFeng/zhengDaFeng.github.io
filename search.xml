@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>使用 HSmartWindowControl 控件</title>
+      <link href="/2019/03/27/%E4%BD%BF%E7%94%A8%20HSmartWindowControl%20%E6%8E%A7%E4%BB%B6/"/>
+      <url>/2019/03/27/%E4%BD%BF%E7%94%A8%20HSmartWindowControl%20%E6%8E%A7%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p>从 Halcon 13 开始，MvTech 提供了一个相比于 HWindowControl 更好的控件 – HSmartWindowControl。不过基于版权原因（网上的破解版只提供到 Halcon 12），该控件在各大自动化设备公司都鲜有使用。但是为什么会有新版控件问世呢？显然是为了提高开发效率并且修复相关BUG了，所以使用 HSmartWindowControl 是有意义的。<br><a id="more"></a></p><h1 id="HSmartWindowControl-的优点"><a href="#HSmartWindowControl-的优点" class="headerlink" title="HSmartWindowControl 的优点"></a>HSmartWindowControl 的优点</h1><ul><li>它与其他控件的使用方式一样(例如，它可以嵌入选项卡控件或滚动查看器，或者与其他控件重叠)。</li><li>提供预定义的鼠标交互(移动窗口内容和使用鼠标滚轮缩放)。双击窗口可以重置视图。</li><li>控件自动刷新时不闪烁。</li></ul><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>要开启控件的缩放功能，还应该添加如下代码：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c#"><br>// HSmartWindowControl 控件实例：WindowControl<br>// HSmartWindowControl 控件实例的 Load 事件：WindowControl_Load<br><br>private void WindowControl_Load(object sender, EventArgs e)<br>&#123;<br>    this.MouseWheel += my_MouseWheel;<br>&#125;<br><br>private void my_MouseWheel(object sender, MouseEventArgs e)<br>&#123;<br>    // 转换鼠标坐标，使它们相对于 HSmartWindowControl 的左上角。<br>    Point pt = WindowControl.Location;<br>    MouseEventArgs newe = new MouseEventArgs(e.Button, e.Clicks, <br>                                                e.X - pt.X, e.Y - pt.Y, e.Delta);<br>    WindowControl.HSmartWindowControl_MouseWheel(sender, newe);<br>&#125;<br></code></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>Halcon Doc - Programmer’s Guide</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# &amp; Halcon 联合编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Halcon </tag>
+            
+            <tag> C# </tag>
+            
+            <tag> HSmartWindowControl </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo &amp;&amp; aria 博文置顶</title>
       <link href="/2019/03/26/hexo%20&amp;&amp;%20aria%20%E5%8D%9A%E6%96%87%E7%BD%AE%E9%A1%B6/"/>
       <url>/2019/03/26/hexo%20&amp;&amp;%20aria%20%E5%8D%9A%E6%96%87%E7%BD%AE%E9%A1%B6/</url>

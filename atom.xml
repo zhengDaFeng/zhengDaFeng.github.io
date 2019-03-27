@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhengdafeng.github.io/"/>
-  <updated>2019-03-26T03:12:29.915Z</updated>
+  <updated>2019-03-27T03:42:22.275Z</updated>
   <id>https://zhengdafeng.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 HSmartWindowControl 控件</title>
+    <link href="https://zhengdafeng.github.io/2019/03/27/%E4%BD%BF%E7%94%A8%20HSmartWindowControl%20%E6%8E%A7%E4%BB%B6/"/>
+    <id>https://zhengdafeng.github.io/2019/03/27/使用 HSmartWindowControl 控件/</id>
+    <published>2019-03-27T03:21:00.000Z</published>
+    <updated>2019-03-27T03:42:22.275Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;从 Halcon 13 开始，MvTech 提供了一个相比于 HWindowControl 更好的控件 – HSmartWindowControl。不过基于版权原因（网上的破解版只提供到 Halcon 12），该控件在各大自动化设备公司都鲜有使用。但是为什么会有新版控件问世呢？显然是为了提高开发效率并且修复相关BUG了，所以使用 HSmartWindowControl 是有意义的。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="C# &amp; Halcon 联合编程" scheme="https://zhengdafeng.github.io/categories/C-Halcon-%E8%81%94%E5%90%88%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Halcon" scheme="https://zhengdafeng.github.io/tags/Halcon/"/>
+    
+      <category term="C#" scheme="https://zhengdafeng.github.io/tags/C/"/>
+    
+      <category term="HSmartWindowControl" scheme="https://zhengdafeng.github.io/tags/HSmartWindowControl/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo &amp;&amp; aria 博文置顶</title>

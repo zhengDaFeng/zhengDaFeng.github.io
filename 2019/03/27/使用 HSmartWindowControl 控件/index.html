@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head><meta name="generator" content="Hexo 3.8.0">
@@ -132,7 +131,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>标签 | 郑大峰的博客</title>
+    <title>使用 HSmartWindowControl 控件 | 郑大峰的博客</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -172,23 +171,91 @@
         <div class="main-container">
           <div class="content">
             
-<div id="tags" class="tags page">
-  <article class="article post card">
+<div id="post" class="page">
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://zhengdafeng.github.io/2019/03/27/使用 HSmartWindowControl 控件/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="Jeff Cheng">
+       <meta itemprop="description" content>
+       <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="郑大峰的博客">
+      </span>
+    </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">标签</h1>
-    </header>
-    <main class="post-main">
-      <h2 class="page-counter">
+      <h1 class="post-title" itemprop="name headline">使用 HSmartWindowControl 控件</h1>
+      <div class="post-meta">
         
-        你已经创建了 25 个标签！
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-03-27T11:21:00+08:00">2019-03-27 11:21:00</time></span>
+        </span>
         
-      </h2>
-      <div class="tags-cloud">
-        <a href="/tags/Aria/" style="font-size: 16px; color: #777">Aria</a> <a href="/tags/Byte数组/" style="font-size: 16px; color: #777">Byte数组</a> <a href="/tags/C/" style="font-size: 32px; color: #111">C#</a> <a href="/tags/GitHub-Page/" style="font-size: 16px; color: #777">GitHub Page</a> <a href="/tags/HSmartWindowControl/" style="font-size: 16px; color: #777">HSmartWindowControl</a> <a href="/tags/HWindowControl/" style="font-size: 16px; color: #777">HWindowControl</a> <a href="/tags/Halcon/" style="font-size: 24px; color: #444">Halcon</a> <a href="/tags/Hexo/" style="font-size: 16px; color: #777">Hexo</a> <a href="/tags/aria-theme/" style="font-size: 16px; color: #777">aria theme</a> <a href="/tags/canny/" style="font-size: 16px; color: #777">canny</a> <a href="/tags/hexo/" style="font-size: 16px; color: #777">hexo</a> <a href="/tags/sobel/" style="font-size: 16px; color: #777">sobel</a> <a href="/tags/个人信息/" style="font-size: 16px; color: #777">个人信息</a> <a href="/tags/内存管理/" style="font-size: 16px; color: #777">内存管理</a> <a href="/tags/塑料物体/" style="font-size: 16px; color: #777">塑料物体</a> <a href="/tags/工厂模式/" style="font-size: 16px; color: #777">工厂模式</a> <a href="/tags/快速傅里叶变换/" style="font-size: 16px; color: #777">快速傅里叶变换</a> <a href="/tags/指针/" style="font-size: 16px; color: #777">指针</a> <a href="/tags/简单工厂模式/" style="font-size: 16px; color: #777">简单工厂模式</a> <a href="/tags/继承/" style="font-size: 16px; color: #777">继承</a> <a href="/tags/置顶/" style="font-size: 16px; color: #777">置顶</a> <a href="/tags/表面检测/" style="font-size: 16px; color: #777">表面检测</a> <a href="/tags/设计模式/" style="font-size: 16px; color: #777">设计模式</a> <a href="/tags/边缘检测/" style="font-size: 16px; color: #777">边缘检测</a>
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-Halcon-联合编程/" itemprop="url" rel="index"><span itemprop="name">C# & Halcon 联合编程</span></a></span>
+        </span>
+        
+        
+        
+        
       </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>从 Halcon 13 开始，MvTech 提供了一个相比于 HWindowControl 更好的控件 – HSmartWindowControl。不过基于版权原因（网上的破解版只提供到 Halcon 12），该控件在各大自动化设备公司都鲜有使用。但是为什么会有新版控件问世呢？显然是为了提高开发效率并且修复相关BUG了，所以使用 HSmartWindowControl 是有意义的。<br><a id="more"></a></p>
+<h1 id="HSmartWindowControl-的优点"><a href="#HSmartWindowControl-的优点" class="headerlink" title="HSmartWindowControl 的优点"></a>HSmartWindowControl 的优点</h1><ul>
+<li>它与其他控件的使用方式一样(例如，它可以嵌入选项卡控件或滚动查看器，或者与其他控件重叠)。</li>
+<li>提供预定义的鼠标交互(移动窗口内容和使用鼠标滚轮缩放)。双击窗口可以重置视图。</li>
+<li>控件自动刷新时不闪烁。</li>
+</ul>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>要开启控件的缩放功能，还应该添加如下代码：</p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c#"><br>// HSmartWindowControl 控件实例：WindowControl<br>// HSmartWindowControl 控件实例的 Load 事件：WindowControl_Load<br><br>private void WindowControl_Load(object sender, EventArgs e)<br>&#123;<br>    this.MouseWheel += my_MouseWheel;<br>&#125;<br><br>private void my_MouseWheel(object sender, MouseEventArgs e)<br>&#123;<br>    // 转换鼠标坐标，使它们相对于 HSmartWindowControl 的左上角。<br>    Point pt = WindowControl.Location;<br>    MouseEventArgs newe = new MouseEventArgs(e.Button, e.Clicks, <br>                                                e.X - pt.X, e.Y - pt.Y, e.Delta);<br>    WindowControl.HSmartWindowControl_MouseWheel(sender, newe);<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>Halcon Doc - Programmer’s Guide</p>
+
     </main>
-    <footer class="post-footer"></footer>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/Halcon/" rel="tag"><i class="fas fa-tags"></i>Halcon</a>
+        
+        <a class="post-tag button" href="/tags/C/" rel="tag"><i class="fas fa-tags"></i>C#</a>
+        
+        <a class="post-tag button" href="/tags/HSmartWindowControl/" rel="tag"><i class="fas fa-tags"></i>HSmartWindowControl</a>
+        
+      </div>
+      
+    </footer>
   </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/03/26/hexo && aria 博文置顶/" rel="next" title="hexo && aria 博文置顶"><i class="fas fa-angle-left"></i><span class="nav-title">hexo && aria 博文置顶</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+</div>
+
+
+
+  
 </div>
 
           </div>
@@ -246,6 +313,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#HSmartWindowControl-的优点"><span class="toc-text">HSmartWindowControl 的优点</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#注意事项"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol></div>
+    </div>
+    
     
     
     <hr>
@@ -315,5 +393,3 @@
 
   </body>
 </html>
-
-
