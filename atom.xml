@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhengdafeng.github.io/"/>
-  <updated>2019-03-27T03:42:22.275Z</updated>
+  <updated>2019-04-07T14:11:03.313Z</updated>
   <id>https://zhengdafeng.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>分类器的应用示例（一）</title>
+    <link href="https://zhengdafeng.github.io/2019/04/07/Halcon%20%E7%A4%BA%E4%BE%8B%20-%20%E5%88%86%E7%B1%BB%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://zhengdafeng.github.io/2019/04/07/Halcon 示例 - 分类器的应用示例（一）/</id>
+    <published>2019-04-07T13:42:00.000Z</published>
+    <updated>2019-04-07T14:11:03.313Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;该示例通过对象的形状特征对金属部件进行分类。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Halcon 示例" scheme="https://zhengdafeng.github.io/categories/Halcon-%E7%A4%BA%E4%BE%8B/"/>
+    
+    
+      <category term="Halcon" scheme="https://zhengdafeng.github.io/tags/Halcon/"/>
+    
+      <category term="分类器" scheme="https://zhengdafeng.github.io/tags/%E5%88%86%E7%B1%BB%E5%99%A8/"/>
+    
+      <category term="示例" scheme="https://zhengdafeng.github.io/tags/%E7%A4%BA%E4%BE%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用 HSmartWindowControl 控件</title>
-    <link href="https://zhengdafeng.github.io/2019/03/27/%E4%BD%BF%E7%94%A8%20HSmartWindowControl%20%E6%8E%A7%E4%BB%B6/"/>
-    <id>https://zhengdafeng.github.io/2019/03/27/使用 HSmartWindowControl 控件/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/27/Halcon%20&amp;&amp;%20C#%20-%20%E4%BD%BF%E7%94%A8%20HSmartWindowControl%20%E6%8E%A7%E4%BB%B6/"/>
+    <id>https://zhengdafeng.github.io/2019/03/27/Halcon &amp;&amp; C# - 使用 HSmartWindowControl 控件/</id>
     <published>2019-03-27T03:21:00.000Z</published>
-    <updated>2019-03-27T03:42:22.275Z</updated>
+    <updated>2019-04-07T14:18:14.343Z</updated>
     
     <summary type="html">
     
@@ -29,7 +53,7 @@
     
     </summary>
     
-      <category term="C# &amp; Halcon 联合编程" scheme="https://zhengdafeng.github.io/categories/C-Halcon-%E8%81%94%E5%90%88%E7%BC%96%E7%A8%8B/"/>
+      <category term="Halcon &amp;&amp; C#" scheme="https://zhengdafeng.github.io/categories/Halcon-C/"/>
     
     
       <category term="Halcon" scheme="https://zhengdafeng.github.io/tags/Halcon/"/>
@@ -42,10 +66,10 @@
   
   <entry>
     <title>hexo &amp;&amp; aria 博文置顶</title>
-    <link href="https://zhengdafeng.github.io/2019/03/26/hexo%20&amp;&amp;%20aria%20%E5%8D%9A%E6%96%87%E7%BD%AE%E9%A1%B6/"/>
-    <id>https://zhengdafeng.github.io/2019/03/26/hexo &amp;&amp; aria 博文置顶/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/26/hexo%20&amp;&amp;%20aria%20-%20%E5%8D%9A%E6%96%87%E7%BD%AE%E9%A1%B6/"/>
+    <id>https://zhengdafeng.github.io/2019/03/26/hexo &amp;&amp; aria - 博文置顶/</id>
     <published>2019-03-26T02:53:00.000Z</published>
-    <updated>2019-03-26T03:12:29.915Z</updated>
+    <updated>2019-04-07T14:13:51.628Z</updated>
     
     <summary type="html">
     
@@ -66,10 +90,10 @@
   
   <entry>
     <title>塑料物体表面缺陷检测</title>
-    <link href="https://zhengdafeng.github.io/2019/03/25/%E5%A1%91%E6%96%99%E7%89%A9%E4%BD%93%E8%A1%A8%E9%9D%A2%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/"/>
-    <id>https://zhengdafeng.github.io/2019/03/25/塑料物体表面缺陷检测/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/25/Halcon%20%E7%A4%BA%E4%BE%8B%20-%20%E8%A1%A8%E9%9D%A2%E6%A3%80%E6%B5%8B%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://zhengdafeng.github.io/2019/03/25/Halcon 示例 - 表面检测的应用示例（一）/</id>
     <published>2019-03-25T08:47:00.000Z</published>
-    <updated>2019-03-26T02:32:34.681Z</updated>
+    <updated>2019-04-07T14:19:56.699Z</updated>
     
     <summary type="html">
     
@@ -77,7 +101,7 @@
     
     </summary>
     
-      <category term="Halcon 示例程序" scheme="https://zhengdafeng.github.io/categories/Halcon-%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F/"/>
+      <category term="Halcon 示例" scheme="https://zhengdafeng.github.io/categories/Halcon-%E7%A4%BA%E4%BE%8B/"/>
     
     
       <category term="表面检测" scheme="https://zhengdafeng.github.io/tags/%E8%A1%A8%E9%9D%A2%E6%A3%80%E6%B5%8B/"/>
@@ -90,10 +114,10 @@
   
   <entry>
     <title>我的技能</title>
-    <link href="https://zhengdafeng.github.io/2019/03/25/%E6%88%91%E7%9A%84%E6%8A%80%E8%83%BD/"/>
-    <id>https://zhengdafeng.github.io/2019/03/25/我的技能/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/25/Others%20-%20%E6%88%91%E7%9A%84%E6%8A%80%E8%83%BD/"/>
+    <id>https://zhengdafeng.github.io/2019/03/25/Others - 我的技能/</id>
     <published>2019-03-25T05:41:00.000Z</published>
-    <updated>2019-03-26T03:30:03.000Z</updated>
+    <updated>2019-04-07T14:18:58.455Z</updated>
     
     <summary type="html">
     
@@ -101,7 +125,7 @@
     
     </summary>
     
-      <category term="我" scheme="https://zhengdafeng.github.io/categories/%E6%88%91/"/>
+      <category term="Others" scheme="https://zhengdafeng.github.io/categories/Others/"/>
     
     
       <category term="个人信息" scheme="https://zhengdafeng.github.io/tags/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/"/>
@@ -110,10 +134,10 @@
   
   <entry>
     <title>边缘检测</title>
-    <link href="https://zhengdafeng.github.io/2019/03/25/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"/>
-    <id>https://zhengdafeng.github.io/2019/03/25/边缘检测/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/25/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%20-%20%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"/>
+    <id>https://zhengdafeng.github.io/2019/03/25/图像处理 - 边缘检测/</id>
     <published>2019-03-25T05:37:00.000Z</published>
-    <updated>2019-03-26T02:35:47.261Z</updated>
+    <updated>2019-04-07T14:19:35.453Z</updated>
     
     <summary type="html">
     
@@ -121,7 +145,7 @@
     
     </summary>
     
-      <category term="边缘检测" scheme="https://zhengdafeng.github.io/categories/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"/>
+      <category term="图像处理" scheme="https://zhengdafeng.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
     
       <category term="边缘检测" scheme="https://zhengdafeng.github.io/tags/%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"/>
@@ -134,10 +158,10 @@
   
   <entry>
     <title>Halcon &amp;&amp; C# 联合编程时的内存管理</title>
-    <link href="https://zhengdafeng.github.io/2019/03/19/Halcon%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
-    <id>https://zhengdafeng.github.io/2019/03/19/Halcon 内存管理/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/19/Halcon%20&amp;&amp;%20C#%20-%20Halcon%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    <id>https://zhengdafeng.github.io/2019/03/19/Halcon &amp;&amp; C# - Halcon 内存管理/</id>
     <published>2019-03-19T03:45:00.000Z</published>
-    <updated>2019-03-26T02:35:48.646Z</updated>
+    <updated>2019-04-07T14:18:10.492Z</updated>
     
     <summary type="html">
     
@@ -145,7 +169,7 @@
     
     </summary>
     
-      <category term="内存管理" scheme="https://zhengdafeng.github.io/categories/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+      <category term="Halcon &amp;&amp; C#" scheme="https://zhengdafeng.github.io/categories/Halcon-C/"/>
     
     
       <category term="Halcon" scheme="https://zhengdafeng.github.io/tags/Halcon/"/>
@@ -158,10 +182,10 @@
   
   <entry>
     <title>获取Byte[]类型数据的指针</title>
-    <link href="https://zhengdafeng.github.io/2019/03/15/%E8%8E%B7%E5%8F%96Byte%5B%5D%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E6%8C%87%E9%92%88/"/>
-    <id>https://zhengdafeng.github.io/2019/03/15/获取Byte[]类型数据的指针/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/15/C#%20-%20%E8%8E%B7%E5%8F%96Byte%5B%5D%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E6%8C%87%E9%92%88/"/>
+    <id>https://zhengdafeng.github.io/2019/03/15/C# - 获取Byte[]类型数据的指针/</id>
     <published>2019-03-15T06:25:00.000Z</published>
-    <updated>2019-03-26T02:35:45.787Z</updated>
+    <updated>2019-04-07T14:20:07.503Z</updated>
     
     <summary type="html">
     
@@ -169,7 +193,7 @@
     
     </summary>
     
-      <category term="C# 代码方案" scheme="https://zhengdafeng.github.io/categories/C-%E4%BB%A3%E7%A0%81%E6%96%B9%E6%A1%88/"/>
+      <category term="C#" scheme="https://zhengdafeng.github.io/categories/C/"/>
     
     
       <category term="指针" scheme="https://zhengdafeng.github.io/tags/%E6%8C%87%E9%92%88/"/>
@@ -180,10 +204,10 @@
   
   <entry>
     <title>在派生类中引发基类事件</title>
-    <link href="https://zhengdafeng.github.io/2019/03/14/%E5%9C%A8%E6%B4%BE%E7%94%9F%E7%B1%BB%E4%B8%AD%E5%BC%95%E5%8F%91%E5%9F%BA%E7%B1%BB%E4%BA%8B%E4%BB%B6/"/>
-    <id>https://zhengdafeng.github.io/2019/03/14/在派生类中引发基类事件/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/14/C#%20-%20%E5%9C%A8%E6%B4%BE%E7%94%9F%E7%B1%BB%E4%B8%AD%E5%BC%95%E5%8F%91%E5%9F%BA%E7%B1%BB%E4%BA%8B%E4%BB%B6/"/>
+    <id>https://zhengdafeng.github.io/2019/03/14/C# - 在派生类中引发基类事件/</id>
     <published>2019-03-14T04:00:00.000Z</published>
-    <updated>2019-03-26T02:36:05.341Z</updated>
+    <updated>2019-04-07T14:14:47.413Z</updated>
     
     <summary type="html">
     
@@ -205,10 +229,10 @@
   
   <entry>
     <title>工厂模式</title>
-    <link href="https://zhengdafeng.github.io/2019/03/14/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://zhengdafeng.github.io/2019/03/14/简单工厂模式和工厂模式/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/14/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://zhengdafeng.github.io/2019/03/14/设计模式 - 简单工厂模式和工厂模式/</id>
     <published>2019-03-14T02:44:00.000Z</published>
-    <updated>2019-03-26T02:35:42.659Z</updated>
+    <updated>2019-04-07T14:19:48.222Z</updated>
     
     <summary type="html">
     
@@ -231,10 +255,10 @@
   
   <entry>
     <title>类库项目中 HWindowControl 类型的声明异常</title>
-    <link href="https://zhengdafeng.github.io/2019/03/13/%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/"/>
-    <id>https://zhengdafeng.github.io/2019/03/13/类库项目中HWindowControl类型声明问题/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/13/Halcon%20&amp;&amp;%20C#%20-%20%E7%B1%BB%E5%BA%93%E9%A1%B9%E7%9B%AE%E4%B8%ADHWindowControl%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/"/>
+    <id>https://zhengdafeng.github.io/2019/03/13/Halcon &amp;&amp; C# - 类库项目中HWindowControl类型声明问题/</id>
     <published>2019-03-13T08:24:00.000Z</published>
-    <updated>2019-03-26T02:36:01.125Z</updated>
+    <updated>2019-04-07T14:18:19.571Z</updated>
     
     <summary type="html">
     
@@ -242,7 +266,7 @@
     
     </summary>
     
-      <category term="C# &amp; Halcon 联合编程" scheme="https://zhengdafeng.github.io/categories/C-Halcon-%E8%81%94%E5%90%88%E7%BC%96%E7%A8%8B/"/>
+      <category term="Halcon &amp;&amp; C#" scheme="https://zhengdafeng.github.io/categories/Halcon-C/"/>
     
     
       <category term="Halcon" scheme="https://zhengdafeng.github.io/tags/Halcon/"/>
@@ -255,10 +279,10 @@
   
   <entry>
     <title>基于 GitHub Page &amp;&amp; Hexo &amp;&amp; Aria 的建站过程</title>
-    <link href="https://zhengdafeng.github.io/2019/03/13/%E5%9F%BA%E4%BA%8EGitHub-Page-&amp;-Hexo-&amp;-Aria%E7%9A%84%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/"/>
-    <id>https://zhengdafeng.github.io/2019/03/13/基于GitHub-Page-&amp;-Hexo-&amp;-Aria的建站过程/</id>
+    <link href="https://zhengdafeng.github.io/2019/03/13/hexo%20&amp;&amp;%20aria%20-%20%E5%9F%BA%E4%BA%8EGitHub-Page-&amp;-Hexo-&amp;-Aria%E7%9A%84%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/"/>
+    <id>https://zhengdafeng.github.io/2019/03/13/hexo &amp;&amp; aria - 基于GitHub-Page-&amp;-Hexo-&amp;-Aria的建站过程/</id>
     <published>2019-03-13T05:46:00.000Z</published>
-    <updated>2019-03-26T02:35:44.420Z</updated>
+    <updated>2019-04-07T14:15:45.678Z</updated>
     
     <summary type="html">
     
