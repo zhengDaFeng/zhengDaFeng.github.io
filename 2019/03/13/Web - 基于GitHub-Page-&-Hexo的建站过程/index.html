@@ -94,13 +94,18 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Zdfffg&#39;s Blog">
-<meta property="og:url" content="https://zhengdafeng.github.io/index.html">
+  <meta name="description" content="…说到底，还是喜欢折腾啊。">
+<meta name="keywords" content="GitHub Page,Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web - 基于GitHub-Page-&amp;-Hexo的建站过程">
+<meta property="og:url" content="https://zhengdafeng.github.io/2019/03/13/Web - 基于GitHub-Page-&-Hexo的建站过程/index.html">
 <meta property="og:site_name" content="Zdfffg&#39;s Blog">
+<meta property="og:description" content="…说到底，还是喜欢折腾啊。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-21T16:10:12.944Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zdfffg&#39;s Blog">
+<meta name="twitter:title" content="Web - 基于GitHub-Page-&amp;-Hexo的建站过程">
+<meta name="twitter:description" content="…说到底，还是喜欢折腾啊。">
 
 
 
@@ -108,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="https://zhengdafeng.github.io/">
+  <link rel="canonical" href="https://zhengdafeng.github.io/2019/03/13/Web - 基于GitHub-Page-&-Hexo的建站过程/">
 
 
 
@@ -119,7 +124,7 @@
 </script>
 
   
-  <title>Zdfffg's Blog</title>
+  <title>Web - 基于GitHub-Page-&-Hexo的建站过程 | Zdfffg's Blog</title>
   
 
 
@@ -167,8 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -206,7 +210,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -262,9 +266,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -296,10 +300,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/13/Web - 基于GitHub-Page-&-Hexo的建站过程/" class="post-title-link" itemprop="url">Web - 基于GitHub-Page-&-Hexo的建站过程</a>
+          <h1 class="post-title" itemprop="name headline">Web - 基于GitHub-Page-&-Hexo的建站过程
+
               
             
           </h1>
@@ -393,23 +395,31 @@
       
 
       
-        
-          <p>…说到底，还是喜欢折腾啊。<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/13/Web - 基于GitHub-Page-&-Hexo的建站过程/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+        <p>…说到底，还是喜欢折腾啊。<br><a id="more"></a></p>
+<h1 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h1><ul>
+<li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Page</a>（我们将网站托管在这里）</li>
+<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git for Window</a>（我们使用它输入各种命令）</li>
+<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a>（我们使用它来下载Hexo框架）</li>
+<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>（博客框架）</li>
+</ul>
+<h1 id="写作阶段"><a href="#写作阶段" class="headerlink" title="写作阶段"></a>写作阶段</h1><p>文章头部，定义“标题”、“日期”、“分类”、“标签”和“显示大纲截至位置”等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Web - 基于GitHub-Page-&amp;-Hexo的建站过程</span><br><span class="line">date: 2019-03-13 13:46:00</span><br><span class="line">categories:</span><br><span class="line">  - Web</span><br><span class="line">tags:</span><br><span class="line">  - GitHub Page</span><br><span class="line">  - Hexo</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">...说到底，还是喜欢折腾啊。</span><br><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure></p>
+<h1 id="进阶阶段"><a href="#进阶阶段" class="headerlink" title="进阶阶段"></a>进阶阶段</h1><h2 id="数学公式渲染"><a href="#数学公式渲染" class="headerlink" title="数学公式渲染"></a>数学公式渲染</h2><p>首先，卸载原有的渲染器 hexo-renderer-marked，并安装渲染器 hexo-renderer-kramed：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure></p>
+<p>如果使用渲染器 hexo-renderer-pandoc，在生成或部署时会出错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error:</span><br><span class="line">[ERROR][hexo-renderer-pandoc]...</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>然后在主题中开启数学公式渲染引擎，文章头部需要添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mathjax: true</span><br></pre></td></tr></table></figure></p>
+<p>测试公式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\frac&#123;\partial u&#125;&#123;\partial t&#125;</span><br><span class="line">= h^2 \left( \frac&#123;\partial^2 u&#125;&#123;\partial x^2&#125; +</span><br><span class="line">\frac&#123;\partial^2 u&#125;&#123;\partial y^2&#125; +</span><br><span class="line">\frac&#123;\partial^2 u&#125;&#123;\partial z^2&#125;\right)</span><br><span class="line">$$</span><br></pre></td></tr></table></figure></p>
+<p>结果：</p>
+<script type="math/tex; mode=display">
+\frac{\partial u}{\partial t}
+= h^2 \left( \frac{\partial^2 u}{\partial x^2} +
+\frac{\partial^2 u}{\partial y^2} +
+\frac{\partial^2 u}{\partial z^2}\right)</script>
       
-    </p></div>
+    </div>
 
     
 
+    
+      
     
 
     
@@ -427,14 +437,25 @@
 
     <footer class="post-footer">
       
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/GitHub-Page/" rel="tag"># GitHub Page</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -444,14 +465,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -471,8 +493,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -546,6 +577,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准备阶段"><span class="nav-number">1.</span> <span class="nav-text">准备阶段</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写作阶段"><span class="nav-number">2.</span> <span class="nav-text">写作阶段</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进阶阶段"><span class="nav-number">3.</span> <span class="nav-text">进阶阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数学公式渲染"><span class="nav-number">3.1.</span> <span class="nav-text">数学公式渲染</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -673,6 +721,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -686,12 +738,6 @@
   
 
   
-  
-    
-      
-        
-      
-    
   
 
   
@@ -747,6 +793,8 @@
 
   
 
+
+  
 
 
   
