@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Web - 基于GitHub-Page-&-Hexo的建站过程]]></title>
+    <url>%2F2019%2F03%2F13%2FWeb%20-%20%E5%9F%BA%E4%BA%8EGitHub-Page-%26-Hexo%E7%9A%84%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[…说到底，还是喜欢折腾啊。 准备阶段 GitHub Page（我们将网站托管在这里） Git for Window（我们使用它输入各种命令） Node.js（我们使用它来下载Hexo框架） Hexo（博客框架） 写作阶段文章头部，定义“标题”、“日期”、“分类”、“标签”和“显示大纲截至位置”等。123456789101112---title: Web - 基于GitHub-Page-&amp;-Hexo的建站过程date: 2019-03-13 13:46:00categories: - Webtags: - GitHub Page - Hexo---...说到底，还是喜欢折腾啊。&lt;!-- more --&gt; 进阶阶段数学公式渲染首先，卸载原有的渲染器 hexo-renderer-marked，并安装渲染器 hexo-renderer-kramed：12npm un hexo-renderer-marked --savenpm i hexo-renderer-kramed --save 如果使用渲染器 hexo-renderer-pandoc，在生成或部署时会出错：123456hexo gINFO Start processingFATAL Something&apos;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.htmlError:[ERROR][hexo-renderer-pandoc]...... 然后在主题中开启数学公式渲染引擎，文章头部需要添加：1mathjax: true 测试公式：123456$$\frac&#123;\partial u&#125;&#123;\partial t&#125;= h^2 \left( \frac&#123;\partial^2 u&#125;&#123;\partial x^2&#125; +\frac&#123;\partial^2 u&#125;&#123;\partial y^2&#125; +\frac&#123;\partial^2 u&#125;&#123;\partial z^2&#125;\right)$$ 结果： \frac{\partial u}{\partial t} = h^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right)]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>GitHub Page</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
